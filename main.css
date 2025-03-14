@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.board {
+    font-family: 'Chess', sans-serif;
+    border: 2px solid #000;
+    width: calc(100% - 40px);
+    margin: 50px auto 0;
+}
+.row{
+    display: flex;
+}
+.field {
+    position: relative;
+    padding: calc(100% / 16);
+}
+
+.row .field:nth-child(2n){
+    background: #000;
+}
+.row:nth-child(2n) .field:nth-child(1n){
+    background: #000;
+}
+.row:nth-child(2n) .field:nth-child(2n){
+    background: #fff;
+}
+
+.figure {
+    font-size: 65px;
+    color: darkred;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    cursor: pointer;
+}
